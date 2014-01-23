@@ -1,0 +1,7 @@
+#Change this value in-game with /gravespawn world worldname
+#Doing so does not require a server restart. If you edit this
+#file manually, you must restart your server.
+Settings:
+    World: world
+    Debug:
+        Verbose: false

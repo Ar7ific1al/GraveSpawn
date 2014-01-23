@@ -1,0 +1,37 @@
+author: Ar7ific1al
+description: Respawn messages and grave spawns
+main: com.github.ar7ific1al.gravespawn.Plugin
+name: GraveSpawn
+url: 
+version: 0.1a
+commands:
+    setgrave:
+        description: Create a new grave at the player's location
+        usage: /newgrave GraveTitle UseYaw UsePitch
+        permission: gravespawn.admin
+    gravespawn:
+        description: Base GraveSpawn command, has many uses
+        usage: /gravespawn
+        permission: gravespawn.player
+        default: true
+    graves:
+        description: Returns a list of graves in the spawn world
+        usage: /graves
+    tpgrave:
+        description: Teleport to the specified grave
+        usage: /<command> grave_name
+    grave:
+        description: View grave information or delete a grave
+        usage: /grave gravename [delete]
+permissions:
+    gravespawn.admin:
+        description: Create new graves, view grave list, teleport to grave
+        default: op
+    gravespawn.message:
+      description: Receive respawn messages
+    gravespawn.respawn:
+      description: Respawn at predetermined graves
+      default: false
+    gravespawn.toggle:
+      description: Toggle gravespawn on or off
+      default: false

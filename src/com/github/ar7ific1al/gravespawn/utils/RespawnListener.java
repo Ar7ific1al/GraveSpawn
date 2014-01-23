@@ -11,7 +11,6 @@ import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
-import org.bukkit.event.player.PlayerCommandPreprocessEvent;
 import org.bukkit.event.player.PlayerRespawnEvent;
 
 import com.github.ar7ific1al.gravespawn.Grave;
@@ -24,14 +23,6 @@ public class RespawnListener implements Listener {
 	public RespawnListener(Plugin instance) {
 		plugin = instance;
 		Plugin.console.info("[GraveSpawn] Death Listener registered.");
-	}
-
-	@EventHandler
-	public void playerCommand(PlayerCommandPreprocessEvent event) {
-		String commandArgs[] = event.getMessage().split(" ");
-		if (commandArgs.length == 6) {
-			
-		}
 	}
 
 	@EventHandler(priority = EventPriority.HIGHEST)
@@ -52,9 +43,8 @@ public class RespawnListener implements Listener {
 				event.setRespawnLocation(spawnLocation);
 				Bukkit.getScheduler().scheduleSyncDelayedTask(
 						plugin,
-						new SoundScheduler(event.getRespawnLocation()
-								.getWorld(), event.getRespawnLocation(), grave
-								.getSound(), grave.getPitchVariation()), 1L);
+						new SoundScheduler(event.getRespawnLocation().getWorld(), event.getRespawnLocation(),
+								grave.getSound(), grave.getPitchVariation()), 1L);
 				if (pluginSettings.GetEntry("Settings.Debug.Verbose") == Boolean.TRUE) {
 					Bukkit.getServer()
 							.getLogger()
@@ -66,7 +56,6 @@ public class RespawnListener implements Listener {
 
 			}
 		} catch (IOException | InvalidConfigurationException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

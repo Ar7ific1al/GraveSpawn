@@ -52,7 +52,6 @@ public class Plugin extends JavaPlugin {
 		try {
 			CreateSettingsFile();
 		} catch (IOException | InvalidConfigurationException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		pm.registerEvents(loginlistener, this);
@@ -67,7 +66,6 @@ public class Plugin extends JavaPlugin {
 		try {
 			Graves = Grave.RefreshGraveList();
 		} catch (IOException | InvalidConfigurationException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}

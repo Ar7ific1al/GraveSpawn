@@ -22,6 +22,7 @@ public class Plugin extends JavaPlugin {
 	// HI AR7IFIC1AL!! :D
 	//	HI JAG :D
 	//	another test :P
+	//	HELLO AGAIN JAG
 	public static Logger console = Logger.getLogger("Minecraft");
 	public String version;
 

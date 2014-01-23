@@ -19,6 +19,7 @@ import com.github.ar7ific1al.gravespawn.utils.RespawnListener;
 
 public class Plugin extends JavaPlugin {
 	//	THIS IS A TEST FOR COMMIT FROM ECLIPSE! >:(
+	// HI AR7IFIC1AL!! :D
 	public static Logger console = Logger.getLogger("Minecraft");
 	public String version;
 
